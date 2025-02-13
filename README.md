@@ -24,5 +24,8 @@ Trata-se de um quiz desenvolvido em HTML, CSS e JavaScript para testar o conheci
 ![parabens](https://github.com/user-attachments/assets/1021eedb-b6c0-422a-a8d8-eca4802d2e7f)
 ![fim](https://github.com/user-attachments/assets/af52b171-c10c-4df1-9240-d2bfff6bad94)
 
+## Licença
+Este projeto está licenciado sob a Licença MIT. Veja o arquivo LICENSE para mais detalhes.
+
 
 
