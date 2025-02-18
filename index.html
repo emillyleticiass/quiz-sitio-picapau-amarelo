@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz de Reciclagem</title>
+    <link rel="stylesheet" href="quizdereciclagem.css">
+</head>
+
+<!--TÍTULO TESTE SEUS CONHECIMENTOS*/-->
+<header>
+    <h1>Teste seus conhecimentos</h1>
+</header>
+
+<body>
+    <!-- CONTÉM TODAS AS PERGUNTAS, RESPOSTAS E BOTÃO DE AVANÇAR-->
+    <div class="container">
+        <div id="quiz"></div>
+        
+        <template id="quiz-template">
+            <div class="pergunta">
+                <h3 class="textoPergunta"></h3>
+                <div class="respostas-container"></div>
+                     <dl class="textoResposta"></dl>
+            </div>
+        </template>
+        
+        <!-- Ícones usados para decoração -->
+            <div class="icone_amarelinha"></div>
+            <div class="icone_emilia"></div>
+            <div class="icone_visconde"></div>
+            <div class="icone_anastacia"></div>
+            <div class="icone_donabenta"></div>
+            <div class="icone_barnabe"></div>
+            <div class="icone_pedrinho"></div>
+            <div class="icone_rabico"></div>
+            <div class="icone_saci"></div>
+            <div class="icone_cuca"></div>
+            <div id="confete" class="icone_confete"></div>
+            
+           <audio id="audio_abertura">
+                <source src="Audio/Abertura_SitiodoPicapauAmarelo.mp3" type="audio/mpeg">
+           </audio>
+
+           <button onclick="playAudio()" class="botaoPlay">Play</button>
+           <button onclick="pauseAudio()" class="botaoPause">Parar</button>
+
+
+
+        <!-- Permite que a mensagem de fim apareça após a última questão ser respondida -->
+        <button id="proxima-pergunta" style="display:none;">Próxima Pergunta</button>
+
+
+        <!-- Mensagem sinalizando o fim do quiz -->
+        <div id="mensagem-fim" style="display: none;">
+            <p>Fim do quiz!</p>
+        </div>
+
+    </div>
+    <!-- CONTÉM A MENSAGEM DE COMEMORAÇÃO-->
+    <div id="mensagem-comemoracao" style="display: none;">PARABÉNS!<br>🎉🎉</div>
+
+    <script src="confetti-js-master/dist/index.min.js"></script>
+    <canvas id="my-canvas"></canvas>
+
+    <script>
+        function exibirConfetes(){
+            var confettiSettings = { target: 'my-canvas' };
+            var confetti = new ConfettiGenerator(confettiSettings);
+            confetti.render();
+        }
+
+        setTimeout(quizTerminado, 5000); // Chama a função após 5 segundos
+    </script>
+
+    <script src="quizdereciclagem.js"></script>
+
+</body>
+</html>
